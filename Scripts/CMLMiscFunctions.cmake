@@ -84,7 +84,7 @@ function(check_ssh_github_access VAR_NAME)
 endfunction()
 
 #################################################################################
-# Extra functions to use within CMake-enabled OpenCMISS applications and examples
+# Extra functions to use within CMake-enabled CMLIBS applications and examples
 
 # Composes a native PATH-compatible variable to use for DLL/SO finding.
 # Each extra argument is assumed a path to add. Added in the order specified.
@@ -116,11 +116,11 @@ function(get_library_path OUTPUT_VARIABLE)
     set(${OUTPUT_VARIABLE} "${LD_VARNAME}=${LD_PATH}" PARENT_SCOPE)
 endfunction()
 
-# Convenience function to add the currently found OpenCMISS runtime environment to any
-# test using OpenCMISS libraries
-# Intended use is the OpenCMISS User SDK.
-function(add_opencmiss_environment TESTNAME)
-    get_library_path(PATH_DEFINITION "${OPENCMISS_BINARIES_PATH}")
+# Convenience function to add the currently found CMLIBS runtime environment to any
+# test using CMLIBS libraries
+# Intended use is the CMLIBS User SDK.
+function(add_cmlibs_environment TESTNAME)
+    get_library_path(PATH_DEFINITION "${CMLIBS_BINARIES_PATH}")
     messaged("Setting environment for test ${TESTNAME}: ${LD_PATH}")
     # Set up the correct environment for the test
     # See https://cmake.org/pipermail/cmake/2009-May/029464.html
