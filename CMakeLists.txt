@@ -73,6 +73,7 @@ set(FIND_MODULE_WRAPPERS_FILES_LIST
     ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindFreetype.cmake
     ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindGDCM-ABI.cmake
     ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindGLEW.cmake
+    ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindGoogleTest.cmake
     ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindGTest.cmake
     ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindHDF5.cmake
     ${CMAKE_CURRENT_SOURCE_DIR}/Modules/FindModuleWrappers/FindITK.cmake

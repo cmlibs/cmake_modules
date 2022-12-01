@@ -1,11 +1,8 @@
 # Create the list of all components we'll need FindXXX wrappers for.
 # Those components are all but those we maintain ourselves.
 if (NOT DEFINED GENERATE_COMPONENTS)
-    set(GENERATE_COMPONENTS BZIP2 FIELDML-API GTEST HDF5 LIBXML2 SZIP 
-        ZLIB CELLML CLANG CSIM HYPRE IRON BLAS LIBCELLML
-        LLVM MUMPS PARMETIS PASTIX PETSC PLAPACK SCALAPACK SCOTCH SLEPC
-        SOWING SUITESPARSE SUNDIALS SUPERLU SUPERLU_DIST FREETYPE FTGL 
-        GDCM-ABI GLEW IMAGEMAGICK ITK JPEG NETGEN OPTPP PNG TIFF ZINC
+    set(GENERATE_COMPONENTS BZIP2 FIELDML-API GOOGLETEST HDF5 LIBXML2 SZIP 
+        ZLIB LLVM FREETYPE FTGL GDCM-ABI GLEW IMAGEMAGICK ITK JPEG NETGEN OPTPP PNG TIFF ZINC
     )
 else ()
     string(REPLACE "-semi-colon-" ";" GENERATE_COMPONENTS ${GENERATE_COMPONENTS})
@@ -21,16 +18,14 @@ set(LIBXML2_CASENAME LibXml2)
 set(BZIP2_CASENAME BZip2)
 set(FREETYPE_CASENAME Freetype)
 set(IMAGEMAGICK_CASENAME ImageMagick)
-set(GTEST_CASENAME GTest)
-set(CLANG_CASENAME Clang)
-set(CSIM_CASENAME CSim)
+set(GOOGLETEST_CASENAME GoogleTest)
 # Some packages naturally have their exported target names differ from those of the package - this is convenience but
 # enables us to stay more consistent (e.g. we have "libbz2.a" on system installations instead of "libbzip2.a")
 set(LIBXML2_TARGETNAME xml2)
 set(BZIP2_TARGETNAME bz2)
 set(NETGEN_TARGETNAME nglib)
 set(IMAGEMAGICK_TARGETNAME MagickCore)
-set(GTEST_TARGETNAME gtest_main) # This will bite us some day.
+set(GOOGLETEST_TARGETNAME GTest__GTest) # This will bite us some day.
 # There's also a logical 'gtest' target. But here we can only define one (in general for ALL possible
 # packages to cover with this kind of wrapper)
 
